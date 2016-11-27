@@ -1,0 +1,2 @@
+exe render : [ glob-tree *.cpp *.hpp : ] ../Parser//parser ;
+install install_render : render : <location>build/bin ;
