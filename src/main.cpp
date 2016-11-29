@@ -5,5 +5,5 @@
 
 int main()
 {
-
+    auto node = ModulSystem.generate(parserNode);
 }
