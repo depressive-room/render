@@ -1,2 +1,4 @@
-exe render : [ glob-tree *.cpp *.hpp : ] ../Parser//parser ;
-install install_render : render : <location>build/bin ;
+lib Renderlib : [ glob-tree *.cpp *.hpp : main* ] ../Parser ;
+
+exe main : src/main.cpp Renderlib ;
+install install_main : main : <location>build/bin ;
