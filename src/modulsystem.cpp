@@ -9,8 +9,9 @@ std::shared_ptr<Base> f(ParserNode parserNode)
 ModulSystem::ModulSystem()
 {}
 
-void ModulSystem::generate(std::map <std::string, std::function <std::shared_ptr<Base>(const ParserNode &)>> modulSystem)
+std::shared_ptr<Base> ModulSystem::generate(ParserNode parserNode)
 {
-    std::shared_ptr<Base> generate = modulSystem.at("TagName")();
-    generate->blabla();
+    std::string key = parserNode;
+    std::shared_ptr<Base> generate = modulSystem.at(key)();
+    return generate;
 }
