@@ -1,4 +1,9 @@
 #include "modulsystem.h"
+#include "base.h"
+#include "tagbody.h"
+#include "taghtml.h"
+
+namespace Render
 
 template <class Tag>
 std::shared_ptr<Base> f(ParserNode parserNode)
@@ -7,7 +12,10 @@ std::shared_ptr<Base> f(ParserNode parserNode)
 }
 
 ModulSystem::ModulSystem()
-{}
+{
+    modulSystem.emplace("Html", f<TagHtml>);
+    modulSystem.emplace("Body", f<TagBody>);
+}
 
 std::shared_ptr<Base> ModulSystem::generate(ParserNode parserNode)
 {

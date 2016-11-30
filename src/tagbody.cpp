@@ -1,5 +1,7 @@
 #include "tagbody.h"
 
+namespace Render
+
 TagBody::TagBody(const ParserNode &parserNode):
     Base(parserNode)
 {}

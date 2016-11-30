@@ -1,5 +1,7 @@
 #include "base.h"
 
+namespace Render
+
 Base::Base(const ParserNode &parserNode)
 {}
 

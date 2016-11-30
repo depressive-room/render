@@ -1,6 +1,7 @@
 #ifndef TAGHTML_H
 #define TAGHTML_H
 
+namespace Render
 
 class TagHtml: public Base
 {

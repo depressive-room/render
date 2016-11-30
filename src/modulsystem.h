@@ -5,6 +5,8 @@
 #include <functional>
 #include <memory>
 
+namespace Render
+
 class ModulSystem
 {
 public:
