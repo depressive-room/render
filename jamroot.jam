@@ -1,4 +1,17 @@
-lib Renderlib : [ glob-tree *.cpp *.hpp : main* ] ../Parser ;
+import qt5 ;
+
+if ! [ qt5.initialized ]
+{
+ECHO "Warning: Qt5 not initialized in user-config.jam" ;
+}
+# Настройки текущего проекта
+project Renrerlib
+	: default-build release
+	: build-dir build
+	: requirements <threading>multi <include>../Parser/src
+	;
+
+lib Renderlib : [ glob-tree *.cpp *.hpp : main* ] ../Parser /qt5//QtGui /qt5//QtWidgets ;
 
 exe main : src/main.cpp Renderlib ;
 install install_main : main : <location>build/bin ;
