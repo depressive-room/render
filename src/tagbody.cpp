@@ -1,4 +1,5 @@
 #include "tagbody.h"
+#include <QtWidgets/QWidget>
 
 namespace Render
 

@@ -1,14 +1,14 @@
 #include "modulsystem.h"
-#include "base.h"
 #include "tagbody.h"
 #include "taghtml.h"
+#include <QtWidgets/QWidget>
 
 namespace Render
 
 template <class Tag>
-std::shared_ptr<Base> f(ParserNode parserNode)
+QWidget* f(ParserNode parserNode, QWidget* parent)
 {
-    return std::make_shared<Tag>(parserNode);
+    return new <Tag>(parserNode, parent);
 }
 
 ModulSystem::ModulSystem()
@@ -17,9 +17,8 @@ ModulSystem::ModulSystem()
     modulSystem.emplace("Body", f<TagBody>);
 }
 
-std::shared_ptr<Base> ModulSystem::generate(ParserNode parserNode)
+QWidget* ModulSystem::generate(parserNode, parent)
 {
-    std::string key = parserNode;
-    std::shared_ptr<Base> generate = modulSystem.at(key)();
+    Qwidget* generate = modulSystem.at(parserNode)();
     return generate;
 }

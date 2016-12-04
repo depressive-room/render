@@ -1,4 +1,5 @@
 #include "taghtml.h"
+#include <QtWidgets/QWidget>
 
 namespace Render
 
