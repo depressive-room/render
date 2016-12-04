@@ -4,7 +4,7 @@
 #include <map>
 #include <functional>
 #include <memory>
-#include <QtWidgets/QWidget>
+#include <QWidget>
 
 namespace Render
 
