@@ -2,6 +2,11 @@
 #include <QtWidgets/QWidget>
 
 namespace Render
+{
+
+    
+}
+
 
 TagHtml::TagHtml(const ParserNode &parserNode):
     Base(parserNode)
