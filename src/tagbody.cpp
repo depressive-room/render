@@ -2,6 +2,10 @@
 #include <QtWidgets/QWidget>
 
 namespace Render
+{
+
+
+}
 
 TagBody::TagBody(const ParserNode &parserNode):
     Base(parserNode)
