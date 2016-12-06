@@ -10,7 +10,7 @@ namespace Render
 }
 class TagTable: public QWidget
 {
-   public
+   public:
       Q_OBJECT
       TagTable(const ParserNode &parserNode);
       void blabla();
