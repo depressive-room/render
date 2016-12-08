@@ -1,4 +1,4 @@
-#include "tagimage.h"
+#include "tagimage.hpp"
 
 namespace Render{
 

@@ -6,7 +6,7 @@
 #include <memory>
 #include <QWidget>
 #include <parser.hpp>
-#include "parsernode.h"
+#include "parsernode.hpp"
 
 
 namespace Render{

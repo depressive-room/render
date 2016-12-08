@@ -1,4 +1,4 @@
-#include "tagbodybcolor.h"
+#include "tagbodybcolor.hpp"
 
 namespace Render{
 

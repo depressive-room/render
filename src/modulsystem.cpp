@@ -1,10 +1,10 @@
-#include "modulsystem.h"
-#include "tagbody.h"
-#include "taghtml.h"
-#include "tagbodybcolor.h"
-#include "tagimage.h"
-#include "tagtable.h"
-#include "tagtitle.h"
+#include "modulsystem.hpp"
+#include "tagbody.hpp"
+#include "taghtml.hpp"
+#include "tagbodybcolor.hpp"
+#include "tagimage.hpp"
+#include "tagtable.hpp"
+#include "tagtitle.hpp"
 
 namespace Render{
 

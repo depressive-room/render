@@ -3,7 +3,7 @@
 
 #include <parser.hpp>
 #include <QWidget>
-#include "parsernode.h"
+#include "parsernode.hpp"
 
 namespace Render{
 
