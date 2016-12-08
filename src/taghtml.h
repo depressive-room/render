@@ -1,17 +1,18 @@
 #ifndef TAGHTML_H
 #define TAGHTML_H
 
-#include "parser.hpp"
-#include <QtWidgets/QWidget>
+#include <parser.hpp>
+#include <QWidget>
+#include "parsernode.h"
 
-namespace Render
+namespace Render{
 
 class TagHtml: public QWidget
 {
-public:
     Q_OBJECT
-    TagHtml(const ParserNode &parserNode);
-    void blabla();
+public:
+    TagHtml(const ParserNode &parserNode, QWidget* parent);
 };
+}
 
 #endif // TAGHTML_H

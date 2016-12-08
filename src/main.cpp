@@ -2,9 +2,14 @@
 #include "taghtml.h"
 #include "modulsystem.h"
 
-namespace Render
+namespace Render{
 
 int main()
 {
-    auto node = ModulSystem.generate(parserNode);
+    ParserNode parserNode;
+    QWidget* parent;
+    ModulSystem.generate(parserNode.parserNode, parent);
+
+    return 0;
+}
 }

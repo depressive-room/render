@@ -1,14 +1,13 @@
 #include "modulsystem.h"
 #include "tagbody.h"
 #include "taghtml.h"
-#include <QtWidgets/QWidget>
 
-namespace Render
+namespace Render{
 
 template <class Tag>
 QWidget* f(ParserNode parserNode, QWidget* parent)
 {
-    return new <Tag>(parserNode, parent);
+    return new Tag(parserNode, parent);
 }
 
 ModulSystem::ModulSystem()
@@ -17,8 +16,11 @@ ModulSystem::ModulSystem()
     modulSystem.emplace("Body", f<TagBody>);
 }
 
-QWidget* ModulSystem::generate(parserNode, parent)
+QWidget* ModulSystem::generate(ParserNode parserNode, QWidget* parent)
 {
-    Qwidget* generate = modulSystem.at(parserNode)();
+    auto &fn = modulSystem.at(parserNode.parserNode);
+    QWidget* generate = fn(parserNode, parent);
     return generate;
+}
+
 }

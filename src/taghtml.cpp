@@ -1,18 +1,7 @@
 #include "taghtml.h"
-#include <QtWidgets/QWidget>
 
-namespace Render
-{
+namespace Render{
 
-    
-}
-
-
-TagHtml::TagHtml(const ParserNode &parserNode):
-    Base(parserNode)
+TagHtml::TagHtml(const ParserNode &parserNode, QWidget* parent)
 {}
-
-void TagHtml::blabla()
-{
-    std::cout << "class Test1" << std::endl;
 }

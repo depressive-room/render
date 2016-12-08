@@ -1,16 +1,7 @@
 #include "tagbody.h"
-#include <QtWidgets/QWidget>
 
-namespace Render
-{
+namespace Render{
 
-
-}
-
-TagBody::TagBody(const ParserNode &parserNode):
-    Base(parserNode)
+TagBody::TagBody(const ParserNode &parserNode, QWidget* parent)
 {}
-void TagBody::blabla()
-{
-    std::cout << "class Test2" << std::endl;
 }

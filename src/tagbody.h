@@ -1,17 +1,18 @@
 #ifndef TAGBODY_H
 #define TAGBODY_H
 
-#include "parser.hpp"
-#include <QtWidgets/QWidget>
+#include <parser.hpp>
+#include <QWidget>
+#include "parsernode.h"
 
-namespace Render
+namespace Render{
 
 class TagBody: public QWidget
 {
-public:
     Q_OBJECT
-    TagBody(const ParserNode &parserNode);
-    void blabla();
+public:
+    TagBody(const ParserNode &parserNode, QWidget* parent);
 };
+}
 
 #endif // TAGBODY_H

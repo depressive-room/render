@@ -5,15 +5,18 @@
 #include <functional>
 #include <memory>
 #include <QWidget>
+#include <parser.hpp>
+#include "parsernode.h"
 
-namespace Render
+namespace Render{
 
 class ModulSystem
 {
 public:
-    std::map <std::string, std::function <Qwidget* (const ParserNode &, QWidget*)>> modulSystem;
+    ModulSystem();
+    std::map <std::string, std::function <QWidget* (const ParserNode &, QWidget*)>> modulSystem;
     QWidget* generate(ParserNode parserNode, QWidget* parent);
 };
-
+}
 
 #endif // MODULSYSTEM_H
