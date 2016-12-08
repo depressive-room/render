@@ -3,18 +3,16 @@
 
 #include <parser.hpp>
 #include <QtWidgets/QWidget>
+#include "parsernode.h"
 
-namespace Render
-{
-
-}
+namespace Render{
 
 class TagImage: public QWidget
 {
-public:
     Q_OBJECT
-    TagImage(const ParserNode &parserNode);
-    void blabla();
+public:
+    TagImage(const ParserNode &parserNode, QWidget* parent);
 };
+}
 
 #endif

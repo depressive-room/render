@@ -5,7 +5,7 @@
 class ParserNode
 {
 public:
-    std::string parserNode;
+    std::string Name;
 };
 
 #endif // PARSERNODE_H

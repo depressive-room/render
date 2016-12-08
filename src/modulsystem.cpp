@@ -1,6 +1,10 @@
 #include "modulsystem.h"
 #include "tagbody.h"
 #include "taghtml.h"
+#include "tagbodybcolor.h"
+#include "tagimage.h"
+#include "tagtable.h"
+#include "tagtitle.h"
 
 namespace Render{
 
@@ -14,11 +18,15 @@ ModulSystem::ModulSystem()
 {
     modulSystem.emplace("Html", f<TagHtml>);
     modulSystem.emplace("Body", f<TagBody>);
+    modulSystem.emplace("Bodybcolor", f<TagBodybColor>);
+    modulSystem.emplace("Image", f<TagImage>);
+    modulSystem.emplace("Table", f<TagTable>);
+    modulSystem.emplace("Title", f<TagTitle>);
 }
 
 QWidget* ModulSystem::generate(ParserNode parserNode, QWidget* parent)
 {
-    auto &fn = modulSystem.at(parserNode.parserNode);
+    auto &fn = modulSystem.at(parserNode.Name);
     QWidget* generate = fn(parserNode, parent);
     return generate;
 }

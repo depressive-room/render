@@ -3,17 +3,17 @@
 
 #include <parser.hpp>
 #include <QtWidgets/QWidget>
+#include "parsernode.h"
 
-namespace Render
-{
+namespace Render{
 
-}
 class TagTable: public QWidget
 {
-   public:
-      Q_OBJECT
-      TagTable(const ParserNode &parserNode);
-      void blabla();
+    Q_OBJECT
+public:
+    TagTable(const ParserNode &parserNode, QWidget* parent);
 };
+}
+
 
 #endif
