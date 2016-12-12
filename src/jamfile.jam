@@ -1,0 +1,16 @@
+import qt5 ;
+
+if ! [ qt5.initialized ]
+{
+	ECHO "Warning: Qt5 not initialized in user-config.jam" ;
+}
+
+
+lib Renderlib
+	: [ glob-tree *.cpp *.hpp : main* ] ../../Parser /qt5//QtGui /qt5//QtWidgets
+	: <link>static
+	: <variant>release
+	;
+
+exe main : main.cpp Renderlib ;
+install install_main : main : <location>build/bin ;
