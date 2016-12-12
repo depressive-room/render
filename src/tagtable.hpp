@@ -2,7 +2,7 @@
 #define TAGTABLE_H
 
 #include <parser.hpp>
-#include <QtWidgets/QWidget>
+#include <QWidget>
 #include "parsernode.hpp"
 
 namespace Render{
