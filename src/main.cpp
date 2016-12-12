@@ -5,15 +5,15 @@
 #include "tagimage.hpp"
 #include "tagtable.hpp"
 #include "tagtitle.hpp"
-
-namespace Render{
+#include "parsernode.hpp"
 
 int main()
 {
     ParserNode parserNode;
     QWidget* parent;
-    ModulSystem.generate(parserNode, parent);
+    Render::ModulSystem modulSystem;
+    modulSystem.generate(parserNode, parent);
 
     return 0;
 }
-}
+
