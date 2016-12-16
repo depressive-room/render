@@ -2,6 +2,6 @@
 
 namespace Render{
 
-TagTitle::TagTitle(const ParserNode &parserNode, QWidget* parent)
+TagTitle::TagTitle(const Parser::Tree::Tag &parsTag, QWidget* parent)
 {}
 }

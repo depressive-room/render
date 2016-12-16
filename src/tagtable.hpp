@@ -1,7 +1,7 @@
 #ifndef TAGTABLE_H
 #define TAGTABLE_H
 
-#include <parser.hpp>
+#include <parser.h>
 #include <QWidget>
 #include "parsernode.hpp"
 
@@ -11,7 +11,7 @@ class TagTable: public QWidget
 {
     Q_OBJECT
 public:
-    TagTable(const ParserNode &parserNode, QWidget* parent);
+    TagTable(const Parser::Tree::Tag &parsTag, QWidget* parent);
 };
 }
 

@@ -1,7 +1,7 @@
 #ifndef TAGTITLE
 #define TAGTITLE
 
-#include <parser.hpp>
+#include <parser.h>
 #include <QWidget>
 #include "parsernode.hpp"
 
@@ -11,7 +11,7 @@ class TagTitle: public QWidget
 {
     Q_OBJECT
 public:
-    TagTitle(const ParserNode &parserNode, QWidget* parent);
+    TagTitle(const Parser::Tree::Tag &parsTag, QWidget* parent);
 };
 }
 

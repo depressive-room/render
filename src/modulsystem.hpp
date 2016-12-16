@@ -5,7 +5,6 @@
 #include <functional>
 #include <memory>
 #include <QWidget>
-#include <parser.hpp>
 #include "parsernode.hpp"
 
 
@@ -15,8 +14,8 @@ class ModulSystem
 {
 public:
     ModulSystem();
-    std::map <std::string, std::function <QWidget* (const ParserNode &, QWidget*)>> modulSystem;
-    QWidget* generate(ParserNode parserNode, QWidget* parent);
+    std::map <std::string, std::function <QWidget* (const Parser::Tree::Tag &, QWidget*)>> modulSystem;
+    QWidget* generate(const Parser::Tree::Tag &parsTag, QWidget* parent);
 };
 }
 

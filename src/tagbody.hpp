@@ -1,7 +1,7 @@
 #ifndef TAGBODY_H
 #define TAGBODY_H
 
-#include <parser.hpp>
+#include <parser.h>
 #include <QWidget>
 #include "parsernode.hpp"
 
@@ -11,7 +11,7 @@ class TagBody: public QWidget
 {
     Q_OBJECT
 public:
-    TagBody(const ParserNode &parserNode, QWidget* parent);
+    TagBody(const Parser::Tree::Tag &parsTag, QWidget* parent);
 };
 }
 

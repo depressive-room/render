@@ -1,7 +1,7 @@
 #ifndef TAGBODYBCOLOR
 #define TAGBODYBCOLOR
 
-#include <parser.hpp>
+#include <parser.h>
 #include <QWidget>
 #include "parsernode.hpp"
 
@@ -11,7 +11,7 @@ class TagBodybColor: public QWidget
 {
     Q_OBJECT
 public:
-    TagBodybColor(const ParserNode &parserNode, QWidget* parent);
+    TagBodybColor(const Parser::Tree::Tag &parsTag, QWidget* parent);
 };
 }
 

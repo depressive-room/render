@@ -9,9 +9,9 @@
 namespace Render{
 
 template <class Tag>
-QWidget* f(ParserNode parserNode, QWidget* parent)
+QWidget* f(const Parser::Tree::Tag &parsTag, QWidget* parent)
 {
-    return new Tag(parserNode, parent);
+    return new Tag(parsTag, parent);
 }
 
 ModulSystem::ModulSystem()
@@ -24,10 +24,10 @@ ModulSystem::ModulSystem()
     modulSystem.emplace("Title", f<TagTitle>);
 }
 
-QWidget* ModulSystem::generate(ParserNode parserNode, QWidget* parent)
+QWidget* ModulSystem::generate(const Parser::Tree::Tag &parsTag, QWidget* parent)
 {
-    auto &fn = modulSystem.at(parserNode.Name);
-    QWidget* generate = fn(parserNode, parent);
+    auto &fn = modulSystem.at(parsTag.name);
+    QWidget* generate = fn(parsTag, parent);
     return generate;
 }
 

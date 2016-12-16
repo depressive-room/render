@@ -2,6 +2,6 @@
 
 namespace Render{
 
-TagBodybColor::TagBodybColor(const ParserNode &parserNode, QWidget* parent)
+TagBodybColor::TagBodybColor(const Parser::Tree::Tag &parsTag, QWidget* parent)
 {}
 }

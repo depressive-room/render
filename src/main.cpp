@@ -9,10 +9,10 @@
 
 int main()
 {
-    ParserNode parserNode;
+    const Parser::Tree::Tag &parsTag;
     QWidget* parent;
     Render::ModulSystem modulSystem;
-    modulSystem.generate(parserNode, parent);
+    modulSystem.generate(parsTag, parent);
 
     return 0;
 }

@@ -1,7 +1,7 @@
 #ifndef TAGIMAGE
 #define TAGIMAGE
 
-#include <parser.hpp>
+#include <parser.h>
 #include <QWidget>
 #include "parsernode.hpp"
 
@@ -11,7 +11,7 @@ class TagImage: public QWidget
 {
     Q_OBJECT
 public:
-    TagImage(const ParserNode &parserNode, QWidget* parent);
+    TagImage(const Parser::Tree::Tag &parsTag, QWidget* parent);
 };
 }
 
