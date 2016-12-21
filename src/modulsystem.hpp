@@ -15,7 +15,8 @@ class ModulSystem
 public:
     ModulSystem();
     std::map <std::string, std::function <QWidget* (const Parser::Tree::Tag &, QWidget*)>> modulSystem;
-    QWidget* generate(const Parser::Tree::Tag &parsTag, QWidget* parent);
+    QWidget* generateTag(const Parser::Tree::Tag &parsTag, QWidget* parent);
+    QWidget* generateText(const Parser::Tree::Text &parsText, QWidget* parent);
 };
 }
 

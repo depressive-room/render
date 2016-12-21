@@ -1,10 +1,9 @@
 #include "modulsystem.hpp"
 #include "tagbody.hpp"
-#include "taghtml.hpp"
 #include "tagbodybcolor.hpp"
 #include "tagimage.hpp"
 #include "tagtable.hpp"
-#include "tagtitle.hpp"
+#include "text.hpp"
 
 namespace Render{
 
@@ -16,18 +15,22 @@ QWidget* f(const Parser::Tree::Tag &parsTag, QWidget* parent)
 
 ModulSystem::ModulSystem()
 {
-    modulSystem.emplace("Html", f<TagHtml>);
-    modulSystem.emplace("Body", f<TagBody>);
-    modulSystem.emplace("Bodybcolor", f<TagBodybColor>);
-    modulSystem.emplace("Image", f<TagImage>);
-    modulSystem.emplace("Table", f<TagTable>);
-    modulSystem.emplace("Title", f<TagTitle>);
+    modulSystem.emplace("body", f<TagBody>);
+    modulSystem.emplace("bodybcolor", f<TagBodybColor>);
+    modulSystem.emplace("image", f<TagImage>);
+    modulSystem.emplace("table", f<TagTable>);
 }
 
-QWidget* ModulSystem::generate(const Parser::Tree::Tag &parsTag, QWidget* parent)
+QWidget* ModulSystem::generateTag(const Parser::Tree::Tag &parsTag, QWidget* parent)
 {
     auto &fn = modulSystem.at(parsTag.name);
     QWidget* generate = fn(parsTag, parent);
+    return generate;
+}
+
+QWidget* ModulSystem::generateText(const Parser::Tree::Text &parsText, QWidget* parent)
+{
+    QWidget* generate = new Text(parsText, parent);
     return generate;
 }
 
