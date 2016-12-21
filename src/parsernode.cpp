@@ -3,11 +3,12 @@
 #include <map>
 #include "modulsystem.hpp"
 
-void walk(boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root)
+QWidget* render(boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root)
 {
     Render::ModulSystem modulsystem;
     std::stack<std::pair<boost::variant<Parser::Tree::Tag, Parser::Tree::Text>, QWidget*>> stack;
     QWidget* parent;
+    QWidget* ret = nullptr;
 
     if (root.which() == 0)
     {
@@ -41,6 +42,8 @@ void walk(boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root)
                                     // tag to text
                                 }
 
+                                if (pair.second == nullptr)
+                                    ret = parent;
                                 for (const auto &child : tag.children)
                                     stack.push(std::make_pair(child, parent));
                             }
@@ -59,5 +62,10 @@ void walk(boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root)
     else
     {
        // all page to text
+
+        const Parser::Tree::Tag &text = boost::get<Parser::Tree::Tag>(root);
+        ret = modulsystem.generateText(text.name, nullptr);
     }
+
+    return ret;
 }

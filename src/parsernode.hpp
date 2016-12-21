@@ -4,7 +4,8 @@
 #include <tree_stuct.h>
 #include <parser.h>
 #include "boost/variant.hpp"
+#include <QWidget>
 
-void walk (boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root);
+QWidget* render (boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root);
 
 #endif // PARSERNODE_H
