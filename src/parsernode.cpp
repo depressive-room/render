@@ -3,6 +3,8 @@
 #include <map>
 #include "modulsystem.hpp"
 
+namespace Render {
+
 QWidget* render(boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root)
 {
     Render::ModulSystem modulsystem;
@@ -68,4 +70,6 @@ QWidget* render(boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root)
     }
 
     return ret;
+}
+
 }

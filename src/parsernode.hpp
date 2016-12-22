@@ -6,6 +6,10 @@
 #include "boost/variant.hpp"
 #include <QWidget>
 
+namespace Render {
+
 QWidget* render (boost::variant<Parser::Tree::Tag, Parser::Tree::Text> root);
+
+}
 
 #endif // PARSERNODE_H
