@@ -1,18 +1,9 @@
-# Получаем путь до boost и подключаем его к своему проекту
-
-import os ;
-
-BOOST_ROOT = [ os.environ BOOST_ROOT ] ;
-
-use-project boost : $(BOOST_ROOT) ;
-
-
-
-project Renrerlib
-	: requirements <link>static <threading>multi <include>$(BOOST_ROOT) <include>../Parser/src
+project render
+	: requirements <cxxflags>-fPIC <threading>multi <include>../parser/src
 	: default-build <variant>release
 	: build-dir build
 	;
 
+use-project parser : ../parser ;
 
 build-project src ;
